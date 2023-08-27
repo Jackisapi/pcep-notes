@@ -29,3 +29,30 @@ cost_of_apple = cost_of_apple + 2
 #variables can be modified
 cost_of_apple += 2 
 #can also be modified
+
+print("One Apple Costs " + str(cost_of_apple))
+#A method to concat a sting to a variable
+
+name = input("What is your name ")
+''' Taking input name and storing it as string 
+Inputs do not need prompts input() is also exceptable'''
+
+truth = True
+
+#conditional statements
+
+if truth == True:
+    #if this statement is true
+    print("The Truth is True")
+    #execute the following
+else:
+    #if it is not true 
+    print("We have all been lied to")
+    #execute this instead
+#You can have multiple conditions using the elif statement
+lies = False
+if lies == True:
+    print("Thats missinformation")
+elif lies == False:
+    print("Sounds about right")
+
