@@ -219,6 +219,85 @@ drinks =['mntdew','pepsi','coffee']
 sodas = drinks[:]
 del sodas[2]
 print(drinks)
+
 print(sodas)
 #Now they are seperate lists
 
+#list slicing 
+
+#as you could probably figure out list slicing works like this 
+# list[start:end]
+print(favorite_numbers[0:3])
+#as you can assume you can store this as a variable 
+
+top_three = favorite_numbers[0:3]
+
+#if you dont include a number it will simply start at the first or last item in a list
+print(top_three[:1])
+print(top_three[:1])
+
+#you can also use - values  to splice while removing certian values (useful if you dont know the length of a list)
+print(favorite_numbers[1:-1])
+#you can also delete items in a list with a slice (this will change the origional list)
+del favorite_numbers[1:3]
+print(favorite_numbers)
+
+#finding items in a list
+print(12 in favorite_numbers)
+print(13 in favorite_numbers)
+print(12 not in favorite_numbers)
+print(13 not in favorite_numbers)
+#this will return True or False and print it 
+#2D matrix lists essencially lists within  a list
+fridge = [
+    ['cucumbers','tomatoes','celery'],
+    ['cheese', 'ham','eggs'],
+    ['milk','salami','soda']
+]
+print(fridge[2][0])
+
+#3D matrix lists are lists within lists within lists
+
+#Functions
+
+def hello():
+    print("Hello")
+hello()
+#To put it simply functions allow you to contain large ammounts of code and reuse them this makes your code easier to read and simply easier to write
+
+#functions can take arguments think of these like variables 
+
+def is_true(info):
+    if info == True:
+        print("this is true")
+    else:
+        print("This is false")
+global_warming = False
+is_true(global_warming)
+global_warming = True
+is_true(global_warming)
+
+#You can also predefine arguments (these can still be changed as needed)
+
+def sum(a=1,b=2):
+    print(a + b)
+sum()
+sum(5,5)
+
+#if you want to use your output in other chunks of your code you use the return statement. Observe
+
+def is_true_two(info):
+    if info == True:
+        return True
+    else:
+        return false 
+print(is_true_two(global_warming))
+if is_true_two(global_warming) == True:
+    print("Correct")
+#Tuples
+
+#tuples are simmilar to lists but with one major difference they are IMMUTABLEthis means that Tuples cannot be changed once they are creatled
+
+fruits = {"apple","bannana","cherry"}
+
+print(fruits)
