@@ -167,3 +167,58 @@ del groceries[1]
 
 #To read through a list backwards use negative numbers starting at - 1 and going from there
 print(groceries[-1])
+
+#To add a new value to a list use append
+
+groceries.append("Coffee")
+#notice how the new value gets added on to the end of the list 
+#to insert a value into a certian area on the list use this instead
+
+groceries.insert(2,"Spagetti noodles")
+                #position, data 
+#to swap positions in the list simply do this
+
+groceries[0], groceries[1] = groceries[1], groceries[0]
+
+print(groceries)
+#printing the list
+for i in range(0,len(groceries)):
+    print(groceries[i])
+
+favorite_numbers = [12,5,8,6,2]
+#to organize them simply use the .sort method (ONLY WORKS WITH INT AND FLOAT)
+favorite_numbers.sort()
+print(favorite_numbers)
+#to reverse a list use the .reverse method
+favorite_numbers.reverse()
+groceries.reverse()
+print(favorite_numbers)
+print(groceries)
+
+'''IMPORTIANT THING WITH lists
+Say i have list parts
+'''
+parts = ['mobo','cpu','ram','psu']
+print(parts)
+#then I try to copy that list
+
+componants = parts
+print(componants)
+'''This will cause python to use the same list for both keywords 
+This is because when python sees this it will pull all the information from the same spot of memory
+So if we delete an item from parts
+'''
+
+del parts[0]
+
+print(parts)
+print(componants)
+#it will delete that item from both lists due to the fact that in memeory they are the same
+drinks =['mntdew','pepsi','coffee']
+#to copy a list you must splice it
+sodas = drinks[:]
+del sodas[2]
+print(drinks)
+print(sodas)
+#Now they are seperate lists
+
